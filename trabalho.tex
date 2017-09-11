@@ -195,14 +195,6 @@ apresentadas abaixo aquela(s) que corresponderm ao resultado da operação.
 % ----------------------------------------------------------
 % CAPÍTULO
 % ----------------------------------------------------------
-\chapter{\textit{Storyboard}}
-% ----------------------------------------------------------
-
-\includegraphics[scale=0.3]{storyboard}
-
-% ----------------------------------------------------------
-% CAPÍTULO
-% ----------------------------------------------------------
 \chapter{Requisitos Funcionais e Não Funcionais}
 % ----------------------------------------------------------
 
@@ -296,5 +288,61 @@ Maria Clara. Ela é sempre a líder de sua sala no jogo das operações básicas
 matemática, mas durante seu tempo livre ela ajuda seus colegas nos estudos.
 Mesmo tendo facilidade com as operações, jogar com uma certa frequência
 exercita bastante o cérebro.
+
+%----------------------------------------------------------
+% CAPÍTULO
+%----------------------------------------------------------
+\chapter{Modelagem de Tarefas}
+
+\section{Usuário}
+
+\begin{description}
+\item[$\cdot$] Jogador
+\end{description}
+
+\section{Tarefas}
+\begin{description}
+\item[$\cdot$] Criar/alterar \textit{nickname}
+\item[$\cdot$] Consultar \textit{ranking} geral
+\item[$\cdot$] Salvar pontuação no \textit{ranking}
+\end{description}
+
+\section{Análise e modelagem de tarefas}
+\begin{description}
+\item[$\cdot$] Criar/alterar \textit{nickname}
+\begin{verbatim}
+se (usuário já cadastrou um nickname) então:
+    exibir opção para trocar o nickname
+senão:
+    pedir para usuário inserir um nickname
+\end{verbatim}
+
+\item[$\cdot$] Consultar \textit{ranking} geral
+\begin{verbatim}
+se (entradas no ranking for maior que 0) então:
+    exibir ranking
+senão:
+    informar que não existem entradas no ranking
+\end{verbatim}
+
+\item[$\cdot$] Salvar pontuação no \textit{ranking}
+\begin{verbatim}
+se (pontuação atual estiver entre as 100 melhores) então:
+    perguntar se o usário deseja salvar sua pontuação
+    se sim:
+       atualiza o ranking e o exibe ao usuário
+    se não:
+        encerra
+\end{verbatim}
+
+\end{description}
+
+% ----------------------------------------------------------
+% CAPÍTULO
+% ----------------------------------------------------------
+\chapter{\textit{Storyboard}}
+% ----------------------------------------------------------
+
+\includegraphics[scale=0.3]{storyboard}
 
 \end{document}
